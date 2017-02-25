@@ -22,7 +22,7 @@ set :application, 'blogger'
 set :repo_url, 'git@github.com:juli0w/blogger.git'
 set :branch, 'master'
 
-set :linked_files, %w{config/database.yml config/secrets.yml}
+set :linked_files, %w{config/database.yml config/secrets.yml db/production.sqlite3}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
 
 
