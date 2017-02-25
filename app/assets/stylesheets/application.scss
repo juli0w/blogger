@@ -1,0 +1,111 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
+
+@import "materialize/components/color";
+$primary-color: color("grey", "darken-3") !default;
+$secondary-color: color("grey", "darken-4") !default;
+$link-color: color("grey", "darken-4") !default;
+@import "materialize";
+
+html {
+  background-color: color("grey", "lighten-3");
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+// p { font-size: d1.4em; }
+.title-wrapper .title {
+  margin-left: 20px;
+}
+
+i.arrow {
+  display: inline-block;
+  &:before {
+    content: '\203A';
+    font-weight: bold;
+    font-style: normal;
+    font-size: .7em;
+  }
+}
+.no-pad-bot { padding-bottom: 0; }
+.no-pad-top { padding-top: 0; }
+.no-margin-bot { margin-bottom: 0; }
+.no-margin-top { margin-top: 0; }
+.no-pad { padding: 0; }
+
+.nav-wrapper .brand-logo {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+em {
+  // font-family: Lora, 'Times New Roman', serif;
+  font-size: .7em;
+  font-style: normal;
+  padding-left: 2px;
+}
+
+.page-footer h5 {
+  font-weight: bold;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 2.8em;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+.card-description {
+  margin-left: 20px;
+}
+
+.card-image img {
+  margin-bottom: 0px;
+}
+
+.card-content .btn-flat {
+  margin-top: 20px;
+}
+
+.card-content p {
+  padding-bottom: 10px;
+}
+
+.btn-flat {
+  border: 1px solid #aeaeae;
+
+  &:hover {
+    background: #f4f4f4;
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: color("blue-grey", "darken-2");
+  color: white;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.article img {
+  max-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+}

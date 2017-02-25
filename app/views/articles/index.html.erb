@@ -1,0 +1,28 @@
+<div class="row articles">
+  <div class="col s12 l8" style="min-height: 400px;">
+
+    <% @articles.each do |article| %>
+
+    <div class="article card">
+      <% if article.cover? %>
+        <div clas="card-image">
+          <%= image_tag article.cover_url, alt: "Article pic" %>
+        </div>
+      <% end %>
+      <div class="card-title"><%= link_to article.name, blogger_article_path(@blog.slug, article) %></div>
+      <em class="card-description grey-text text-darken-2">Postado em <%= article.created_at.to_date %></em>
+      <div class="card-content">
+        <p><%= article.description %></p>
+
+        <div class="divider"></div>
+        <%= link_to "Ler mais", blogger_article_path(@blog.slug, article), class: "btn-flat btn-large" %>
+      </div>
+    </div>
+
+    <% end %>
+  </div>
+
+  <%= render "layouts/most_viewed" %>
+
+  <%= render "layouts/tags", tags: ActsAsTaggableOn::Tag.most_used(10) %>
+</div>

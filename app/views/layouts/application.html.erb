@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog</title>
+
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <%= render 'layouts/navbar' %>
+
+    <header class="row" style="margin-top: 0;">
+      <div class="col s12 center">
+        <h1><%= link_to @blog.title, @blog.slug, class: "brand-logo grey-text text-darken-3" %></h1>
+        <p><%= @blog.description %></p>
+      </div>
+    </header>
+
+    <%= yield %>
+  </body>
+</html>

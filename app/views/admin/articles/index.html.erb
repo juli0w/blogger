@@ -1,0 +1,39 @@
+<nav role="navigation" class="title-wrapper">
+  <div class="nav-wrapper">
+    <span class="title"><i class="arrow"></i> Artigos</span>
+    <ul class="right">
+      <li><%= link_to "Novo artigo", [:new, :admin, :article] %></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="col s12">
+    <div class="card-panel">
+      <table class="highlight bordered">
+        <thead>
+          <tr>
+            <th data-field="id"></th>
+            <th data-field="name">Artigos</th>
+            <th data-field="actions"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <% @articles.each do |article| %>
+            <tr>
+              <td>#<%= article.id %></td>
+              <td><%= article.name %></td>
+              <td class="center">
+                <%= link_to "editar", [:edit, :admin, article] %><br />
+                <%= link_to "visualizar", blogger_article_path(@blog.slug, article) %>
+              </td>
+            </tr>
+          <% end %>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<nav role="navigation" class="grey darken-4">
+  <div class="nav-wrapper">
+    <%= link_to "BLOG - Administração", root_url, class: "brand-logo lime-text text-accent-3" %>
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to "Artigos", admin_articles_path %></li>
+      <li><%= link_to "Configurações", admin_setup_path %></li>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to "Visitar", blogger_path(@blog.slug) %></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li><%= link_to "Artigos", admin_articles_path %></li>
+      <li><%= link_to "Configurações", admin_setup_path %></li>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to "Visitar", blogger_path(@blog.slug) %></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>

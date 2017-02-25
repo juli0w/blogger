@@ -1,0 +1,27 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class="title">
+    MEU BLOG
+  </div>
+
+  <div class="container">
+    <div class="fields">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, required: true, placeholder: "Email" %>
+    </div>
+
+    <div class="fields">
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: "off", required: true, placeholder: "Senha" %>
+    </div>
+
+    <div class="fields">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", required: true, placeholder: "Confirme a senha" %>
+    </div>
+
+    <%= f.submit "Cadastrar", class: "login" %>
+
+    <%= f.check_box :remember_me %> Lembrar
+    <%= link_to "Já tem cadastro?", new_user_session_path, class: "link" %>
+  </div>
+<% end %>
