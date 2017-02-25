@@ -64,6 +64,9 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano-secrets-yml (1.0.0)
+      capistrano (>= 3.1)
+      sshkit (>= 1.2.0)
     carrierwave (1.0.0)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -207,6 +210,7 @@ DEPENDENCIES
   capistrano-rails (~> 1.2)
   capistrano-rails-collection
   capistrano-rvm
+  capistrano-secrets-yml (~> 1.0.0)
   carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
   devise
