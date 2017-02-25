@@ -1,0 +1,21 @@
+<div class="comments card">
+  <div class="card-title"><h5>Faça um comentário</h5></div>
+
+  <div class="card-content">
+    <%= form_for([@blog, @article, @comment]) do |f| %>
+      <div class="row">
+        <%= f.label :commenter %>
+          <%= f.text_field :commenter, required: true %>
+      </div>
+
+      <div class="row no-margin-bot">
+          <%= f.label :body %>
+          <%= f.text_area :body, required: true, class: "materialize-textarea" %>
+      </div>
+
+      <div class="row no-margin-top no-pad-top no-pad-bot no-margin-bot">
+          <%= f.submit "Comentar", class: "btn-flat btn-large" %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -9,7 +9,7 @@
           <%= image_tag article.cover_url, alt: "Article pic" %>
         </div>
       <% end %>
-      <div class="card-title"><%= link_to article.name, blogger_article_path(@blog.slug, article) %></div>
+      <div class="card-title"><%= link_to article.name, blogger_article_path(@blog, article) %></div>
       <em class="card-description grey-text text-darken-2">Postado em <%= article.created_at.to_date %></em>
       <div class="card-content">
         <p><%= article.description %></p>

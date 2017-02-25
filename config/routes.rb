@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
   resources :bloggers, path: "" do
-    resources :articles, path: ""
+    resources :articles, path: "" do
+      resources :comments
+    end
   end
 end

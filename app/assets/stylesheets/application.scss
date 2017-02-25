@@ -29,6 +29,18 @@ html {
   margin-left: 20px;
 }
 
+strong {
+  font-weight: bold;
+}
+
+.avatar {
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  border: 1px solid #aeaeae;
+}
+
 i.arrow {
   display: inline-block;
   &:before {

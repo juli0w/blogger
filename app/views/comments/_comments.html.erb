@@ -1,0 +1,30 @@
+<%= render "comments/form" %>
+<div class="comments card">
+  <div class="card-title"><h5>Comentários (<%= @article.comments.count %>)</h5></div>
+
+  <% if @article.comments.count > 0 %>
+    <% @article.comments.where.not(id: nil).each do |comment| %>
+      <div class="card-content">
+        <%= image_tag "/images/avatar.png", class: "avatar" %>
+        <p>
+          <strong>Nome:</strong>
+          <%= comment.commenter %>
+        </p>
+        <p>
+          <strong>Comentário:</strong><br>
+          <%= comment.body %>
+        </p>
+        <% if @blog.owner?(current_user) %>
+          <br>
+          <%= link_to "Excluir", blogger_article_comment_path(@blog, @article, comment), method: :delete, confirm: "Confirma?" %>
+        <% end %>
+      </div>
+
+      <div class="divider"></div>
+    <% end %>
+  <% else %>
+    <div class="card-content">
+      Seja o primeiro a comentar
+    </div>
+  <% end %>
+</div>

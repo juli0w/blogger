@@ -7,5 +7,6 @@ class ArticlesController < ApplicationController
   def show
     @blog =  Blogger.find_by_slug(params[:blogger_id])
     @article = @blog.articles.find(params[:id])
+    @comment = @article.comments.build
   end
 end

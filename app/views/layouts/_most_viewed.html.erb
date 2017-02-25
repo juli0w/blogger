@@ -3,7 +3,7 @@
     <ul class="collection with-header">
       <li class="collection-header grey darken-3"><h5 class="white-text">Mais visualizados</h5></li>
       <% @blog.articles.last(5).each do |article| %>
-        <%= link_to article.name, blogger_article_path(@blog.slug, article), class: "collection-item" %>
+        <%= link_to article.name, blogger_article_path(@blog, article), class: "collection-item" %>
       <% end %>
     </ul>
   </div>
