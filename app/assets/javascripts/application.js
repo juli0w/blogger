@@ -13,6 +13,7 @@
 //= require jquery
 //= require materialize
 //= require jquery_ujs
+//= require tinymce-jquery
 //= require_tree .
 
 $(document).ready(function() {

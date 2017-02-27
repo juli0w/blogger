@@ -16,7 +16,7 @@
         </p>
         <% if @blog.owner?(current_user) %>
           <br>
-          <%= link_to "Excluir", blogger_article_comment_path(@blog, @article, comment), method: :delete, confirm: "Confirma?" %>
+          <%= link_to "Excluir", blogger_article_comment_path(@blog, @article, comment), method: :delete, data: { confirm: "Confirma?" } %>
         <% end %>
       </div>
 

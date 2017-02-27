@@ -1,3 +1,4 @@
+<%= tinymce_assets %>
 <%= form_for [:admin, @article], html: { multipart: true } do |f| %>
   <div class="row">
     <div class="col s12 input-field">
@@ -19,16 +20,21 @@
   </div>
   <div class="row">
     <div class="col s12 input-field">
-      <%= f.label :content %>
-      <%= f.text_area :content, class: "materialize-textarea" %>
+      <%= f.label :content %><br>
+      <%= f.text_area :content, class: "tinymce" %>
+      <%= tinymce %>
     </div>
   </div>
   <div class="row">
-    <div class="col s12 input-field">
-      <%= f.label :cover %>
-      <%= image_tag(@article.cover.thumb) if @article.cover? %>
-      <%= f.file_field :cover %>
-      <%= f.hidden_field :cover_cache %>
+    <div class="col s12 file-field input-field">
+      <div class="btn">
+        <span>Capa</span>
+        <%= f.file_field :cover %>
+        <%= f.hidden_field :cover_cache %>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
     </div>
   </div>
   <div class="row">

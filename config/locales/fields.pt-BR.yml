@@ -1,0 +1,14 @@
+---
+pt-BR:
+  activerecord:
+    attributes:
+      article:
+        name: Título
+        description: Descrição
+        tag_list: Tags
+        content: Conteúdo
+        cover: Capa
+      blogger:
+        title: Título
+        slug: Slug
+        description: Descrição
